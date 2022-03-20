@@ -56,7 +56,7 @@ def main():
     st.markdown('''---------------------------------------------------------------------------------------------------------''')
     st.markdown(menu_touchup,unsafe_allow_html=True)
     
-    file_uploaded=st.file_uploader("Upload Json Key File",type=['json']))
+    file_uploaded=st.file_uploader("Upload Json Key File",type=['json'])
     
     btn1=st.button('Track Shipment Status')
 
