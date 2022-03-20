@@ -56,7 +56,7 @@ def main():
     st.markdown('''---------------------------------------------------------------------------------------------------------''')
     st.markdown(menu_touchup,unsafe_allow_html=True)
     
-    creds=ServiceAccountCredentials.from_json_keyfile_name(st.file_uploader("Upload Json Key File",type=['json']),scope)
+    file_uploaded=st.file_uploader("Upload Json Key File",type=['json']))
     
     btn1=st.button('Track Shipment Status')
 
@@ -65,8 +65,7 @@ def main():
     
     
         googlesheeturl="https://docs.google.com/spreadsheets/d/17EW9CAOOwmefEP4toLAubQhj7q-NgsjLRAlzCeKvIIs/edit#gid=1757221736"
-#         creds=ServiceAccountCredentials.from_json_keyfile_name(st.file_uploader("Upload Json Key File"),scope)
-        # st.write(creds.get_access_token())
+        creds=ServiceAccountCredentials.from_json_keyfile_name(StringIO(file_uploaded.getvalue().decode("utf-8")),scope)
         client=gspread.authorize(creds)
         sheet=client.open_by_url(googlesheeturl)
         main_worksheet=sheet.worksheet('Sheet3')
