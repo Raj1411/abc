@@ -63,7 +63,7 @@ def main():
     
     
         googlesheeturl="https://docs.google.com/spreadsheets/d/17EW9CAOOwmefEP4toLAubQhj7q-NgsjLRAlzCeKvIIs/edit#gid=1757221736"
-        creds=ServiceAccountCredentials.from_json_keyfile_name(KEY_1,scope)
+        creds=ServiceAccountCredentials.from_json_keyfile_name(st.file_uploader("Upload Json Key File"),scope)
         # st.write(creds.get_access_token())
         client=gspread.authorize(creds)
         sheet=client.open_by_url(googlesheeturl)
