@@ -55,10 +55,10 @@ def main():
     st.markdown('<h1 style="text-align: center;">Shipment Status Tracker</h1>', unsafe_allow_html=True) 
     st.markdown('''---------------------------------------------------------------------------------------------------------''')
     st.markdown(menu_touchup,unsafe_allow_html=True)
-
-    btn1=st.button('Track Shipment Status')
     
     creds=ServiceAccountCredentials.from_json_keyfile_name(st.file_uploader("Upload Json Key File",type=['json']),scope)
+    
+    btn1=st.button('Track Shipment Status')
 
     if btn1:
 
