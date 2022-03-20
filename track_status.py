@@ -58,7 +58,7 @@ def main():
 
     btn1=st.button('Track Shipment Status')
     
-    creds=ServiceAccountCredentials.from_json_keyfile_name(st.file_uploader("Upload Json Key File"),scope)
+    creds=ServiceAccountCredentials.from_json_keyfile_name(st.file_uploader("Upload Json Key File",type=['json']),scope)
 
     if btn1:
 
