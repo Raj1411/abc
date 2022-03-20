@@ -13,7 +13,7 @@ from PIL import Image
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
 # from decouple import config
-from settings import KEY_1, SHEET_LINK
+# from settings import KEY_1, SHEET_LINK
 
 
 # print(KEY_1)
