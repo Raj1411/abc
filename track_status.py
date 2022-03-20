@@ -8,7 +8,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from pretty_html_table import build_table
 import time
-import pyautogui
+# import pyautogui
 from PIL import Image
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
